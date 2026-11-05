@@ -1,0 +1,12 @@
+{
+  "name": "genealogy-research-log",
+  "version": "0.1.0",
+  "description": "Research one ancestor at a time across FamilySearch and your genealogy subscriptions, then get a finished Ancestor Research Log (.docx, .pdf, .md) with full citations and step-by-step FamilySearch tree fixes.",
+  "author": {
+    "name": "David Heaps"
+  },
+  "keywords": ["genealogy", "family history", "FamilySearch", "research log", "citations", "family tree"],
+  "license": "MIT",
+  "homepage": "https://github.com/dgheaps9/genealogy-research-log",
+  "repository": "https://github.com/dgheaps9/genealogy-research-log"
+}
