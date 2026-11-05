@@ -1,0 +1,36 @@
+{
+ "title": "Research Log – [Full Name] [birth year]",
+ "layout": "current",
+ "ident": [
+  [[["Document Name", true]], [["Research Log – [Full Name] - [birth year]", false]]],
+  [[["Ancestor Name", true]], [["[Full name as given; alternate spellings in parentheses]", false]]],
+  [[["Sex", true]], [["[M / F]", false]]],
+  [[["FamilySearch ID", true]], [["[PID, e.g. ABCD-123]", false]]],
+  [[["Parents (per tree)", true]], [["[Father (PID) and Mother (PID), with confidence level]. If the person is living, add: LIVING – do not upload to Memories", false]]]
+ ],
+ "vitals": [
+  [[["Birth", true]], [["[Date] [Proven / Probable / Possible]", false]], [["[Place]", false]]],
+  [[["Christening", true]], [["[Date] or Not found", false]], [["[Place] or –", false]]],
+  [[["Residence", true]], [["[Years and places from census and other records]", false]], [["[Places]", false]]],
+  [[["Death", true]], [["[Date] [confidence]", false]], [["[Place]", false]]],
+  [[["Burial", true]], [["[Date] [confidence]", false]], [["[Cemetery, place (Find a Grave memorial no.)]", false]]]
+ ],
+ "spouses": [
+  [[["[Spouse name (PID)]", true]], [["Married [date] / [place] / [PID]. [confidence and notes]", false]]]
+ ],
+ "children": [
+  [[["[Child name]", true]], [["[Birth date, place]", false]], [["[PID]", false]], [["[Other parent; notes; conflicts]", false]]]
+ ],
+ "sources": [
+  [[["1", false]], [["\"[Collection title],\" database, [Site]: accessed [d Mon yyyy], [Name], [year]; [event], [place].", false]], {"link": "https://www.familysearch.org/search/"}, [["[Y / N]", false]], [["[d Mon yyyy]", false]], [["[What the record shows and how it was used]", false]]]
+ ],
+ "notes": [
+  [["KEY FINDING – [TOPIC] ([CONFIDENCE]): ", true], ["[What the evidence shows, which sources agree, and any conflicting evidence.]", false]],
+  [["SEARCHES PERFORMED: ", true], ["Site – collection – search terms – result (including searches that found nothing and sites not searched, with the reason).", false]],
+  [["CONFIDENCE KEY: ", true], ["Proven = consistent primary or near-primary evidence, no conflict. Probable = good evidence, one gap or conflict. Possible = suggested by indirect or single-source evidence.", false]],
+  [["STILL TO SEARCH: ", true], ["[Open questions and records to look for next.]", false]]
+ ],
+ "actions": [
+  [["1. [Short name of the tree issue and the fix]. ", true], ["Open the profile: FamilySearch Family Tree, [Name] ([PID]), ", false], {"link": "https://www.familysearch.org/tree/"}, [". [Step-by-step instructions, with a short citation and full URL at each step where a source is used.]", false]]
+ ]
+}
