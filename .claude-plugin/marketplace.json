@@ -1,0 +1,19 @@
+{
+  "name": "genealogy-research-log",
+  "owner": {
+    "name": "David Heaps"
+  },
+  "metadata": {
+    "description": "Free Claude plugins for family history research."
+  },
+  "plugins": [
+    {
+      "name": "genealogy-research-log",
+      "source": "./plugins/genealogy-research-log",
+      "description": "Research one ancestor at a time across FamilySearch and your genealogy subscriptions, then get a finished Ancestor Research Log (.docx, .pdf, .md) with full citations and step-by-step FamilySearch tree fixes.",
+      "version": "0.1.0",
+      "author": { "name": "David Heaps" },
+      "license": "MIT"
+    }
+  ]
+}
