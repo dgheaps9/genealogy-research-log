@@ -15,6 +15,7 @@ Read `references/research-standards.md` before researching and `references/log-f
 - Research the target person only. Offer separate logs for spouses or children found along the way.
 - Use the user's name spellings and IDs. If the user corrects a name, use the corrected spelling everywhere (file name, document, Project copy).
 - The user signs in to their own sites. Never ask for, type, or store passwords. If a site shows a sign-in page, ask the user to sign in, then continue.
+- If a site's page loads but can't be read (timeouts, "blocked by your site permissions"), Claude in Chrome is probably waiting for the user to approve the site. Stop and ask them to choose "Always allow actions on this site", then continue. If they don't approve it, list the site in "Searches performed" as "not searched – site not approved in Claude in Chrome".
 - Respect each site's terms: read pages as the user would, one person at a time. Do not bulk-download or scrape.
 - If the person may be living (born within about 110 years with no death record), treat the log as private and add "LIVING – do not upload to Memories" in Identification.
 
@@ -24,7 +25,7 @@ Read `references/research-standards.md` before researching and `references/log-f
 2. Work out the file name: `Ancestor_Research_Log_<Full Name> <birth year>`.
    - Women: maiden name with married name in parentheses, e.g. `Annie Beale (Street) 1874`.
    - Unknown or estimated year: `abt 1874`.
-3. Find the user's Genealogy folder: the connected folder that contains `_tools/make_log.sh`. If no folder has it, run the **genealogy-setup** skill first (or ask the user which folder to use and install the toolkit as that skill describes).
+3. Find the user's Genealogy folder: the connected folder that contains `_tools/make_log.sh`. If no folder has it, run the **genealogy-setup** skill first (or ask the user which folder to use and install the toolkit as that skill describes). If `_tools/timezone.txt` is missing, create it with the user's time zone (one IANA name, e.g. `America/Denver`, from the session) so log dates match their local date.
 4. Check the Genealogy folder and its `Not in my line` subfolder for an existing log with that name. If updating an existing log, start from `_data/data_<name>.json`; if that is missing, make it with `python3 _tools/extract.py "<log.docx>" "_data/data_<name>.json"`.
 5. If the user says the person is not their ancestor, the log goes in `Not in my line/`.
 

@@ -1,6 +1,8 @@
 # tracker.py - rebuilds Research_Tracker.xlsx from Genealogy/_data, keeping what you typed
 # in the yellow columns (Tree Actions done, Uploaded to Memories?).  Usage: python3 tracker.py
-import json,glob,os,re,datetime
+import json,glob,os,re,datetime,time
+_f=os.path.join(os.path.dirname(os.path.abspath(__file__)),'timezone.txt')   # your time zone (the shell may run in UTC)
+os.environ['TZ']=(open(_f).read().strip() if os.path.exists(_f) else '') or 'UTC'; time.tzset()
 import openpyxl
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment

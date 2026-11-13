@@ -32,3 +32,4 @@ If a page will not load after one retry, note it under "Still to search" and in 
 - Read pages with get_page_text; if only the page shell loads, wait a few seconds and read again.
 - Work in new tabs and close them at the end.
 - If a site asks the user to sign in or prove they are human, stop and ask the user to do it, then continue.
+- If a page loads but can't be read (get_page_text or read_page times out, or says it is blocked by site permissions), the site is probably not yet approved in Claude in Chrome. Ask the user to approve it ("Always allow actions on this site" in the extension's prompt, or check Claude icon → ⋮ → Extension settings → Permissions), then read it again. If they don't approve it, record the site as "not searched – site not approved in Claude in Chrome".

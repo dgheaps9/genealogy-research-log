@@ -5,6 +5,7 @@
 # The .md copy (for the Claude Project) is also placed in _claude_staging.
 # Run from anywhere; the Genealogy folder is the folder that contains this _tools folder.
 set -e
+TZF="$(dirname "$0")/timezone.txt"; export TZ="$( [ -s "$TZF" ] && head -1 "$TZF" | tr -d "[:space:]" || echo UTC)"   # your time zone from _tools/timezone.txt (the shell may run in UTC)
 T="$(cd "$(dirname "$0")" && pwd)"; G="$(dirname "$T")"
 B="$1"; SUB="${2:-.}"; N="Ancestor_Research_Log_$B"; D=$(date +%F)
 [ -z "$B" ] && { echo 'usage: make_log.sh "<Full Name> <year>" [subfolder]'; exit 1; }

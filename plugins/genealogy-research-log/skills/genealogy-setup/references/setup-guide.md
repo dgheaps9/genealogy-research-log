@@ -17,12 +17,14 @@ Use plain language. One step at a time. Product screens change; if a button is n
 
 - Install the Claude extension for Google Chrome (find it from the Claude website or the Chrome Web Store; make sure the publisher is Anthropic).
 - Pin it to the toolbar and sign in with the same Claude account.
-- When Claude first opens a site, Chrome may ask the user to allow Claude on that site. They should allow it for their genealogy sites.
+- Claude in Chrome must be approved on each site before Claude can read it. When Claude first acts on a site, the extension asks; the user chooses **"Always allow actions on this site"** for each genealogy site.
+- Signs that approval is still pending: the page loads but Claude cannot read it (timeouts, or "blocked by your site permissions"). The user checks the Claude side panel for the prompt, or opens Claude icon → ⋮ → Extension settings → Permissions to see which sites are allowed. There is no "add site" button there; a site appears after the user approves it in the prompt.
+- Even on approved sites, Claude still asks before purchases, downloads, deleting data, creating accounts or entering sensitive information.
 - Troubleshooting: Chrome must be open; the extension must be signed in; restarting Chrome fixes most connection problems.
 
 ## 4. Genealogy sites
 
-Offer this list and ask which they use:
+Show this whole list as a numbered list in the chat (not a multiple-choice prompt, which shows only 4 options). The user replies with numbers or names and adds any sites that are not listed. Up to 20 sites is fine.
 
 | Site | Home page | Free or paid |
 |---|---|---|
@@ -38,6 +40,18 @@ Offer this list and ask which they use:
 | Newspaper Archive | https://newspaperarchive.com | Paid |
 | GRO (England & Wales) | https://www.gro.gov.uk | Free account |
 | FreeBMD | https://www.freebmd.org.uk | Free, no sign-in |
+| FreeCEN | https://www.freecen.org.uk | Free, no sign-in |
+| FreeREG | https://www.freereg.org.uk | Free, no sign-in |
+| ScotlandsPeople | https://www.scotlandspeople.gov.uk | Pay per view (free search) |
+| Newspapers.com | https://www.newspapers.com | Paid |
+| GenealogyBank | https://www.genealogybank.com | Paid |
+| Chronicling America (Library of Congress) | https://www.loc.gov/collections/chronicling-america/ | Free, no sign-in |
+| Fold3 | https://www.fold3.com | Paid (some free) |
+| BillionGraves | https://billiongraves.com | Free / Plus |
+| WikiTree | https://www.wikitree.com | Free |
+| Geni | https://www.geni.com | Free / Pro |
+
+Open and check the chosen sites in batches of 3–4, not all at once. For each site: the user signs in, approves it in Claude in Chrome ("Always allow actions on this site"), and Claude reads the page to confirm. A site is ready only when it is both signed in and approved.
 
 The user signs in themselves in Chrome. Claude never sees or types passwords. Sites remember the sign-in for a while; before a research session, the user checks they are still signed in.
 
@@ -52,6 +66,8 @@ Remind the user: they are responsible for following each site's terms of use. Cl
 ## 6–7. Toolkit
 
 Files: `refill.py`, `makemd.py`, `extract.py`, `helpers.py`, `tracker.py`, `make_log.sh`, `Research_Log_Template.docx`, `data_SKELETON.json`.
+
+Claude also writes `timezone.txt` with the user's time zone (one IANA name, e.g. `America/Denver`). The scripts use it for the dates in Superseded file names, citation "accessed" dates and the tracker. Without it they use UTC, which can put dates a day off. If the user moves, they change that one line.
 
 They need Python 3 with python-docx and openpyxl. LibreOffice (free) makes the PDFs; without it, Claude makes the PDF in its own workspace.
 

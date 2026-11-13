@@ -23,7 +23,7 @@ Never change the template's formatting; `refill.py` copies its styles row by row
 | `.md` copy | `_claude_staging/`, then saved to the Claude Project at `claude/<file name>.md` |
 | Older versions | `Superseded/<file name> (yyyy-mm-dd).docx` / `.pdf` |
 | Tracker | `Research_Tracker.xlsx`, rebuilt by `tracker.py` (keeps the user's yellow-column entries) |
-| Toolkit | `_tools/` |
+| Toolkit | `_tools/` (with `timezone.txt`: the user's time zone, used for all dates) |
 
 ## data.json
 

@@ -10,8 +10,14 @@ def prof(name,pid,after=' '): return L('FamilySearch Family Tree, '+name+' ('+pi
 # e.g. cite('Ohio, County Births, 1841-2003','FamilySearch','Mary Example','1874; birth, Jefferson Township, Tuscarawas, Ohio')
 #  -> '"Ohio, County Births, 1841-2003," database, FamilySearch: accessed 1 Nov 2026, Mary Example, 1874; birth, Jefferson Township, Tuscarawas, Ohio.'
 import datetime as _dt
+import os as _os
+from zoneinfo import ZoneInfo as _ZI
+def _tz():  # your time zone from _tools/timezone.txt; UTC if missing
+    f=_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),'timezone.txt')
+    try: return _ZI(open(f).read().strip() or 'UTC')
+    except Exception: return _ZI('UTC')
 def today():  # local date on this computer, e.g. '5 Nov 2026'
-    d = _dt.datetime.now(); return f"{d.day} {d:%b %Y}"
+    d = _dt.datetime.now(_tz()); return f"{d.day} {d:%b %Y}"
 def cite(coll, site, name, detail='', accessed=None, kind='database'):
     s = f'"{coll}," {kind}, {site}: accessed {accessed or today()}, {name}'
     return s + (f', {detail}' if detail else '') + '.'

@@ -54,4 +54,5 @@ This plugin is not affiliated with or endorsed by FamilySearch, Ancestry, Findmy
 
 Free to use, share and change under the MIT License (see LICENSE).
 
+0.2.0 — setup lists up to 20 sites and checks each is signed in and approved in Claude in Chrome; log dates use your own time zone (`_tools/timezone.txt`) instead of UTC.
 0.1.0 — first draft, by David Heaps.

@@ -1,6 +1,6 @@
 # Project instructions (to paste into the user's Claude Project)
 
-Fill in the bracketed parts, show the result to the user, and have them paste it into the Project's instructions. Remove sites they do not subscribe to.
+Fill in the bracketed parts, show the result to the user, and have them paste it into the Project's instructions. List every site they chose, however many; remove sites they do not use.
 
 ---
 
@@ -14,8 +14,8 @@ INPUTS
 - Use the name spellings and IDs I give. If I correct a name, use the corrected spelling in the file name, the document and the Project copy.
 
 RESEARCH
-- Read the sources already attached to the person in FamilySearch by opening their Sources tab in my Chrome with Claude in Chrome. Before a research session, I sign in to [my sites, e.g. Ancestry, MyHeritage, Findmypast] in Chrome. If a site can't be searched, Claude lists it in 'Searches performed' as 'not searched' with the reason.
-- Search all relevant sites, including [FamilySearch, Ancestry, Findmypast, MyHeritage, Find a Grave, American Ancestors, Filae, Geneanet, Storied, Newspaper Archive and the GRO]. Report every relevant record found, including those behind paywalls. I have access to these sites.
+- Read the sources already attached to the person in FamilySearch by opening their Sources tab in my Chrome with Claude in Chrome. Before a research session, I sign in to, and approve in Claude in Chrome, [all my sites, e.g. Ancestry, MyHeritage, Findmypast] in Chrome. If a site can't be searched, Claude lists it in 'Searches performed' as 'not searched' with the reason.
+- Search all relevant sites, including [every site I chose, e.g. FamilySearch, Ancestry, Findmypast, MyHeritage, Find a Grave, American Ancestors, Filae, Geneanet, Storied, Newspaper Archive and the GRO]. Report every relevant record found, including those behind paywalls. I have access to these sites.
 - Give each fact a confidence level (Proven / Probable / Possible) and note any conflicting evidence.
 - Cite sources in full FamilySearch style with the access date, e.g. "Ohio, County Births, 1841-2003," database, FamilySearch: accessed 1 Nov 2026, Mary Example, 1874; birth, Jefferson Township, Tuscarawas, Ohio.
 - Claude never edits FamilySearch. Claude only suggests changes, and I implement them.
