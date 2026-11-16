@@ -62,6 +62,7 @@ This plugin is not affiliated with or endorsed by FamilySearch, Ancestry, Findmy
 
 Free to use, share and change under the MIT License (see LICENSE).
 
+0.3.1 — skill description fix for claude.ai.
 0.3.0 — Ancestor Story (new ancestor-story skill and `story.py`; Story (Y/N) column in the tracker); new rerun-ancestor-log skill; tracker shows "abt" birth years correctly.
 0.2.0 — setup lists up to 20 sites and checks each is signed in and approved in Claude in Chrome; log dates use your own time zone (`_tools/timezone.txt`) instead of UTC.
 0.1.0 — first draft, by David Heaps.

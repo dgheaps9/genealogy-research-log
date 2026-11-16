@@ -1,6 +1,6 @@
 ---
 name: ancestor-story
-description: Writes the Ancestor Story — a warm, footnoted narrative biography ("The Life of <Full Name>, <birth year>–<death year>") of one person who already has an Ancestor Research Log — and builds it as .docx, .pdf and .md with story.py. Use when the user says "write the story for <name>", "with story", "make an ancestor story", answers Yes to "Write the Ancestor Story for <name> now?", or asks to update an existing story.
+description: Writes the Ancestor Story — a warm, footnoted narrative biography ("The Life of [Full Name], [birth year]–[death year]") of one person who already has an Ancestor Research Log — and builds it as .docx, .pdf and .md with story.py. Use when the user says "write the story for [name]", "with story", "make an ancestor story", answers Yes to "Write the Ancestor Story for [name] now?", or asks to update an existing story.
 ---
 
 # Ancestor Story
