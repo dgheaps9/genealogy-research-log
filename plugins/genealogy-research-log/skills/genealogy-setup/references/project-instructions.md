@@ -1,6 +1,6 @@
 # Project instructions (to paste into the user's Claude Project)
 
-Fill in the bracketed parts, show the result to the user, and have them paste it into the Project's instructions. List every site they chose, however many; remove sites they do not use.
+Fill in the bracketed parts (including the user's name exactly as it appears in FamilySearch, for the story's relationship line), show the result to the user, and have them paste it into the Project's instructions. List every site they chose, however many; remove sites they do not use.
 
 ---
 
@@ -42,3 +42,30 @@ SAVING
 WORKING STYLE
 - Use the scripts in [Genealogy folder]/_tools rather than writing new ones.
 - When I give a new standing rule, propose wording to add to these instructions.
+
+ANCESTOR STORY (one per individual, alongside the log)
+- If my request says "with story" or "no story", follow that and don't ask.
+- Otherwise, once the research log is complete, ask: "Write the Ancestor Story for <Full Name> now? (Yes / No)" as a Yes/No choice, and wait for my answer before doing any story work.
+
+YES – write the story
+- Use the genealogy-research-log plugin's ancestor-story skill.
+- Source: the same data_<Full Name>.json; add a "story" section to it. No new genealogical research. Brief web lookups for general historical context (what an occupation involved, local industry and conditions) are allowed, each cited in a footnote.
+- Tone: warm and conversational, like a family historian telling relatives, not a formal report. Stay accurate; never invent dialogue, feelings or motives.
+- Order: origins and parents, birth and childhood, marriage(s), children, occupations and residences, migrations, military service, later life, death and burial. Add short, sourced historical context for key places and times where it helps.
+- Citations: numbered footnotes using the short citation (collection title). Full citations stay in the log.
+- Occupations: for the target ancestor and each spouse, describe every occupation the sources record (censuses, marriage and baptism entries, directories, military papers), with year and place, showing how the work changed over time. Briefly explain the day-to-day work in that place and period (hours, conditions, pay, skills — e.g. what a "worsted spinner" or "carter" did in 1880s Yorkshire). Name the employer or workplace when a source gives it. If a wife has no recorded occupation, mention any hints (pre-marriage occupation, "assisting" in a census); otherwise say plainly that none is recorded and don't assume one.
+- End with a short "Open questions" paragraph on what is still unknown.
+- Top of the story, in this order:
+  1. "LIVING – do not upload to Memories" (living people only)
+  2. Title: "The Life of <Full Name>, <birth year>–<death year>", using the file-name rules (e.g. "The Life of Louisa Butcher (Sims), 1882–1940"). Never use "Ancestor Story" as a heading. No death year: "<birth year>–present" (living), "<birth year>–?" (unknown), "<birth year>–abt <year>" (estimated).
+  3. Bold line: name, dates, PID, date written.
+  4. Relationship line, exactly as FamilySearch "View My Relationship" shows it, with "[my name as it appears in FamilySearch]" in place of "you/your", e.g. "George Example is [my name]'s father (FamilySearch, View My Relationship, accessed 13 Nov 2026)." If the view can't be opened or shows no relationship: "Relationship to [my name] not confirmed in FamilySearch" plus the reason. Don't describe the family path (e.g. "daughter of… niece of…").
+- File name: Ancestor_Story_<Full Name> <birth year> (same naming rules as the log). Formats: .docx, .pdf, .md. Save .docx and .pdf in the same folders as the log, following the same Superseded rule; .md goes only to the Project's claude/ folder, not my computer.
+- Build with [Genealogy folder]/_tools/story.py. Set "Story (Y/N)" to Y in Research_Tracker.xlsx.
+
+NO – skip the story
+- Set "Story (Y/N)" to N in Research_Tracker.xlsx and add "Story declined <date>" to the log's Research Notes. I can ask later with "write the story for <Full Name>".
+- No answer (e.g. a scheduled or unattended run): don't write the story, enter "N – awaiting answer" in Story (Y/N), don't add the "Story declined" note, and tell me it's waiting for my answer.
+
+SKILLS
+- When I say "fixed", "run again", "rerun" or "check and update" for a person who already has a log, use the rerun-ancestor-log skill.

@@ -65,7 +65,9 @@ Remind the user: they are responsible for following each site's terms of use. Cl
 
 ## 6–7. Toolkit
 
-Files: `refill.py`, `makemd.py`, `extract.py`, `helpers.py`, `tracker.py`, `make_log.sh`, `Research_Log_Template.docx`, `data_SKELETON.json`.
+Files: `refill.py`, `makemd.py`, `extract.py`, `helpers.py`, `tracker.py`, `make_log.sh`, `story.py`, `Research_Log_Template.docx`, `data_SKELETON.json`.
+
+Updating from an older version of the plugin: copy any new or changed toolkit files into `_tools` (for 0.3.0: the new `story.py` and the updated `tracker.py`), telling the user which files are replaced. Their research data and tracker entries are kept.
 
 Claude also writes `timezone.txt` with the user's time zone (one IANA name, e.g. `America/Denver`). The scripts use it for the dates in Superseded file names, citation "accessed" dates and the tracker. Without it they use UTC, which can put dates a day off. If the user moves, they change that one line.
 

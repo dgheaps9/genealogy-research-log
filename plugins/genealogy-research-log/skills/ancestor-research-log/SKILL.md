@@ -21,12 +21,12 @@ Read `references/research-standards.md` before researching and `references/log-f
 
 ## 0. Start
 
-1. Say in one line who is being researched. Make a short task list: FamilySearch profile, record search, other sites, build log, save, tracker, check.
+1. Say in one line who is being researched. Make a short task list: FamilySearch profile, record search, other sites, build log, save, tracker, check, story question.
 2. Work out the file name: `Ancestor_Research_Log_<Full Name> <birth year>`.
    - Women: maiden name with married name in parentheses, e.g. `Annie Beale (Street) 1874`.
    - Unknown or estimated year: `abt 1874`.
 3. Find the user's Genealogy folder: the connected folder that contains `_tools/make_log.sh`. If no folder has it, run the **genealogy-setup** skill first (or ask the user which folder to use and install the toolkit as that skill describes). If `_tools/timezone.txt` is missing, create it with the user's time zone (one IANA name, e.g. `America/Denver`, from the session) so log dates match their local date.
-4. Check the Genealogy folder and its `Not in my line` subfolder for an existing log with that name. If updating an existing log, start from `_data/data_<name>.json`; if that is missing, make it with `python3 _tools/extract.py "<log.docx>" "_data/data_<name>.json"`.
+4. Check the Genealogy folder and its `Not in my line` subfolder for an existing log with that name. If the user has fixed the tree and wants the log re-checked ("fixed", "run again", "rerun", "check and update"), use the **rerun-ancestor-log** skill instead. If updating an existing log, start from `_data/data_<name>.json`; if that is missing, make it with `python3 _tools/extract.py "<log.docx>" "_data/data_<name>.json"`.
 5. If the user says the person is not their ancestor, the log goes in `Not in my line/`.
 
 ## 1. Read the FamilySearch profile (Claude in Chrome)
@@ -60,3 +60,11 @@ Use the toolkit in the Genealogy folder's `_tools` (run it with the shell on the
 - If this conversation belongs to a Claude Project, save the .md to the Project (path `claude/<file name>.md`), replacing any earlier copy, so the Project keeps one copy per person.
 - Close the Chrome tabs you opened.
 - Reply briefly: key findings with confidence, conflicts, what is still to search (and sites that would not load), and offer logs for spouses or children found.
+
+## 5. Ancestor Story
+
+- If the user's request said "with story", go straight to the **ancestor-story** skill. If it said "no story", treat it as No (below) without asking.
+- Otherwise, once the log is delivered, ask as a Yes/No choice: "Write the Ancestor Story for <Full Name> now? (Yes / No)" and wait for the answer before any story work.
+  - **Yes:** use the **ancestor-story** skill.
+  - **No:** run `python3 "<Genealogy>/_tools/story.py" "<Full Name> <year>" --status N` (records N in the tracker, adds "Story declined <date>" to the log's Research Notes and rebuilds the log), then save the updated log .md to the Project. Tell the user they can ask later with "write the story for <Full Name>".
+  - **No answer** (scheduled or unattended run): don't write it; run `--status awaiting` and tell the user the story is waiting for their answer.

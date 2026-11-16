@@ -1,6 +1,6 @@
 # Genealogy Research Log for Claude
 
-A free Claude plugin for family historians: give Claude an ancestor's name and FamilySearch ID and get back a finished Ancestor Research Log with full citations, every search performed, and step-by-step fixes for your FamilySearch tree.
+A free Claude plugin for family historians: give Claude an ancestor's name and FamilySearch ID and get back a finished Ancestor Research Log with full citations, every search performed, and step-by-step fixes for your FamilySearch tree — plus an optional footnoted Ancestor Story of each person's life.
 
 See [the plugin's README](plugins/genealogy-research-log/README.md) for what it does, what you need, and how to get started.
 

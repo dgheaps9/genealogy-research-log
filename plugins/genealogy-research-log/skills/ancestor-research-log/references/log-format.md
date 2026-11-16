@@ -22,7 +22,8 @@ Never change the template's formatting; `refill.py` copies its styles row by row
 | `data_<name>.json` | `_data/` — the source of truth; edit it and re-run make_log.sh to update a log |
 | `.md` copy | `_claude_staging/`, then saved to the Claude Project at `claude/<file name>.md` |
 | Older versions | `Superseded/<file name> (yyyy-mm-dd).docx` / `.pdf` |
-| Tracker | `Research_Tracker.xlsx`, rebuilt by `tracker.py` (keeps the user's yellow-column entries) |
+| `Ancestor_Story_<name>.docx` and `.pdf` | Next to the log; built by `story.py` (see the ancestor-story skill) |
+| Tracker | `Research_Tracker.xlsx`, rebuilt by `tracker.py` (keeps the user's yellow-column entries and the Story (Y/N) column) |
 | Toolkit | `_tools/` (with `timezone.txt`: the user's time zone, used for all dates) |
 
 ## data.json
@@ -38,6 +39,8 @@ Start from `_tools/data_SKELETON.json`. Keys:
 - `sources`: rows of `[#, full citation, {"link": url}, "Y" / "N", date accessed, findings]`. Every source gets its full URL, attached or not.
 - `notes`: list of cells. Start each with a bold label, e.g. `KEY FINDING – BIRTH (PROVEN): `. Add one `search()` row per search performed (including nothing-found and not-searched), a `CONFIDENCE KEY` row and a `STILL TO SEARCH` row (tracker.py copies this into the tracker).
 - `actions`: list of cells, each a numbered Tree Action.
+- `story` (optional): the Ancestor Story, added by the ancestor-story skill — format in `../ancestor-story/references/story-format.md`.
+- `story_status` (optional): `"N"` or `"N – awaiting answer"`, set by `story.py --status`; shown in the tracker's Story (Y/N) column.
 
 ### Cell values
 
