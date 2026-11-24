@@ -6,22 +6,34 @@ For the target person, look for every available source on: name (given, middle, 
 
 ## Where to look
 
-Search every relevant site the user has access to. Typical list:
+Choose sites by where the person lived. Before searching beyond FamilySearch, use the profile and attached sources to list every country the person lived in during their lifetime, then search only the sites that cover those countries (and that the user has). Skipping sites that can't hold records for this person saves a lot of usage. If the user's Project instructions give their own site list or grouping, follow that.
 
-| Site | Notes |
+| Site | Search when |
 |---|---|
-| FamilySearch | Attached sources, historical records, tree search for duplicates |
-| Ancestry | Indexes and images; many US, UK and Scandinavian collections |
-| Findmypast | Strong for England, Wales, Scotland, Ireland; parish records, 1921 census, 1939 Register |
-| MyHeritage | International collections, newspapers, other users' trees (treat trees as Possible) |
-| Find a Grave | Memorials, photos, family links (contributor links can be wrong) |
-| American Ancestors | New England and early American records |
-| Geneanet / Filae | France and Europe |
-| Storied | Newspapers, yearbooks, US records |
-| Newspaper Archive | Obituaries, marriages, local news |
-| GRO (England & Wales) | Birth and death index with mother's maiden name |
+| FamilySearch | Always — attached sources, historical records, tree search for duplicates |
+| Ancestry | Always — many US, UK and Scandinavian collections |
+| MyHeritage | Always — international collections, newspapers, other users' trees (treat trees as Possible) |
+| Find a Grave | Always — memorials worldwide, photos, family links (contributor links can be wrong) |
+| Findmypast | England, Wales, Scotland, Ireland — parish records, 1921 census, 1939 Register |
+| GRO (England & Wales) | England & Wales — birth and death index with mother's maiden name |
+| Geneanet | France and Europe; also UK family trees |
+| Filae | France |
+| American Ancestors | United States, especially New England and early America |
+| Storied | United States — newspapers, yearbooks, US records |
+| Newspaper Archive | Mainly United States — obituaries, marriages, local news |
+
+- Search a country's sites only when a source shows the person lived there. Many emigrants (e.g. LDS converts from Britain) need both the old-country and the US sites, so decide from the evidence, not the birthplace alone.
+- If research turns up a move to another country, add that country's sites.
+- For a country not in the table, use the "Always" sites and tell the user if a country-specific site would help.
+- In "Searches performed", list each skipped site once as "not searched – outside the person's places of residence".
 
 Report every relevant record found, including those behind paywalls. If a site cannot be searched (not signed in, page will not load after one retry, no subscription), list it in "Searches performed" as "not searched" with the reason, and move on.
+
+## Keeping usage down
+
+- Read pages as text (get_page_text). Use screenshots only when a page can't be read as text.
+- Open a record page only when its search-results line looks like a likely match; don't open every result.
+- Don't reopen a page already read in this chat.
 
 Coverage checklist (adapt to the country and era): birth/baptism; every census in the person's lifetime; civil birth, marriage and death indexes; parish marriages and burials; probate and wills; military; immigration, emigration and naturalization; newspapers and obituaries; cemetery records.
 

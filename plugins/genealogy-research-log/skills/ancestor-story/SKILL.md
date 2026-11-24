@@ -18,7 +18,7 @@ Read `references/story-format.md` before writing.
 ## 1. Gather
 
 - Use only facts already in the data file (ident, vitals, spouses, children, sources, notes). Do **no new genealogical research**.
-- Brief web lookups for general historical context are allowed (what an occupation involved in that place and period, local industry, living conditions, a war or migration). Cite each one in a footnote with its own link.
+- Brief web lookups for general historical context are allowed (what an occupation involved in that place and period, local industry, living conditions, a war or migration). Cite each one in a footnote with its own link. Keep these to the key occupations and places, usually no more than 5 lookups.
 - Relationship: open `https://www.familysearch.org/tree/person/details/<PID>` in Claude in Chrome and use "View My Relationship". Copy the relationship exactly as shown, with the user's name in place of "you/your", and add "(FamilySearch, View My Relationship, accessed <d Mon yyyy>)". If it can't be opened or shows no relationship, write "Relationship to <user's name> not confirmed in FamilySearch" and the reason. Never describe the family path ("daughter of… niece of…").
 
 ## 2. Write

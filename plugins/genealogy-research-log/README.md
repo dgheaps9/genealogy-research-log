@@ -45,9 +45,17 @@ Or install the `.plugin` file directly if someone sends it to you.
 After installing, say: **"Set up genealogy research."**
 After setup: **"Research Mary Example, FamilySearch ID ABCD-123, born 1874 in Tuscarawas County, Ohio."** Add "with story" or "no story" to skip the story question.
 
+### Keeping usage down
+
+- One ancestor per chat; start a new chat for each person or rerun.
+- Claude searches only the sites that cover the countries the ancestor lived in, so a UK-only ancestor isn't searched on US-only or French sites.
+- After fixing your tree, say "fixed" (or "fixed actions 1 and 3"). A rerun re-checks FamilySearch only; say "rerun with full search" if you want the sites searched again.
+- Say "with story" or "no story" up front.
+- A lighter model (e.g. Sonnet) is usually enough for reruns and straightforward ancestors.
+
 ## Updating
 
-Update the plugin in Claude, then say **"Update my genealogy toolkit."** Claude copies the new and changed scripts into `Genealogy/_tools` (your logs, data and tracker entries are kept). If you pasted Project instructions from an earlier version, ask Claude for the new ANCESTOR STORY and SKILLS sections to add.
+Update the plugin in Claude, then say **"Update my genealogy toolkit."** Claude copies the new and changed scripts into `Genealogy/_tools` (your logs, data and tracker entries are kept). If you pasted Project instructions from an earlier version, ask Claude for the new sections to add (0.4.0: site selection by place lived, KEEPING USAGE DOWN, and the rerun lines under SKILLS; 0.3.0: ANCESTOR STORY and SKILLS).
 
 ## Your responsibilities
 
@@ -62,6 +70,7 @@ This plugin is not affiliated with or endorsed by FamilySearch, Ancestry, Findmy
 
 Free to use, share and change under the MIT License (see LICENSE).
 
+0.4.0 — lower usage: sites chosen by the countries the ancestor lived in; reruns re-check FamilySearch only ("rerun with full search" to search again); fewer page reads; story context lookups capped; usage tips in setup and README.
 0.3.1 — skill description fix for claude.ai.
 0.3.0 — Ancestor Story (new ancestor-story skill and `story.py`; Story (Y/N) column in the tracker); new rerun-ancestor-log skill; tracker shows "abt" birth years correctly.
 0.2.0 — setup lists up to 20 sites and checks each is signed in and approved in Claude in Chrome; log dates use your own time zone (`_tools/timezone.txt`) instead of UTC.
