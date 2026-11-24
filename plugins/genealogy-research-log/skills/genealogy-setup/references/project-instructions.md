@@ -1,6 +1,6 @@
 # Project instructions (to paste into the user's Claude Project)
 
-Fill in the bracketed parts (including the user's name exactly as it appears in FamilySearch, for the story's relationship line), show the result to the user, and have them paste it into the Project's instructions. List every site they chose, however many; remove sites they do not use.
+Fill in the bracketed parts (including the user's name exactly as it appears in FamilySearch, for the story's relationship line), show the result to the user, and have them paste it into the Project's instructions. List every site they chose, however many; remove sites they do not use. In the site-selection list, put each of their sites under the countries it covers (see the ancestor-research-log skill's research-standards.md); drop groups for countries they have no sites for.
 
 ---
 
@@ -14,8 +14,15 @@ INPUTS
 - Use the name spellings and IDs I give. If I correct a name, use the corrected spelling in the file name, the document and the Project copy.
 
 RESEARCH
-- Read the sources already attached to the person in FamilySearch by opening their Sources tab in my Chrome with Claude in Chrome. Before a research session, I sign in to, and approve in Claude in Chrome, [all my sites, e.g. Ancestry, MyHeritage, Findmypast] in Chrome. If a site can't be searched, Claude lists it in 'Searches performed' as 'not searched' with the reason.
-- Search all relevant sites, including [every site I chose, e.g. FamilySearch, Ancestry, Findmypast, MyHeritage, Find a Grave, American Ancestors, Filae, Geneanet, Storied, Newspaper Archive and the GRO]. Report every relevant record found, including those behind paywalls. I have access to these sites.
+- Read the sources already attached to the person in FamilySearch by opening their Sources tab in my Chrome with Claude in Chrome. Before a research session, I sign in to, and approve in Claude in Chrome, the sites I'm likely to need. If a site can't be searched, Claude lists it in 'Searches performed' as 'not searched' with the reason.
+- Choose sites by where the ancestor lived. First read the FamilySearch profile and attached sources to work out every country the ancestor lived in during their lifetime. Then search only the sites that cover those countries:
+  - Always: [e.g. FamilySearch, Ancestry, MyHeritage, Find a Grave].
+  - [Country]: [my sites for that country, e.g. England & Wales: Findmypast, the GRO, Geneanet].
+  - [United States: e.g. American Ancestors, Storied, Newspaper Archive].
+  - Any other country: the "Always" sites; tell me if a country-specific site would help.
+- Search a country's sites only when a source shows the ancestor lived there. If research turns up a move to another country, add that country's sites.
+- In 'Searches performed', list each skipped site once as 'not searched – outside the ancestor's places of residence'.
+- Report every relevant record found, including those behind paywalls. I have access to these sites.
 - Give each fact a confidence level (Proven / Probable / Possible) and note any conflicting evidence.
 - Cite sources in full FamilySearch style with the access date, e.g. "Ohio, County Births, 1841-2003," database, FamilySearch: accessed 1 Nov 2026, Mary Example, 1874; birth, Jefferson Township, Tuscarawas, Ohio.
 - Claude never edits FamilySearch. Claude only suggests changes, and I implement them.
@@ -43,13 +50,18 @@ WORKING STYLE
 - Use the scripts in [Genealogy folder]/_tools rather than writing new ones.
 - When I give a new standing rule, propose wording to add to these instructions.
 
+KEEPING USAGE DOWN
+- One ancestor per chat. Start a new chat for each new person or rerun.
+- Read web pages as text (get_page_text). Use screenshots only when a page can't be read as text.
+- Open a record page only when the search-results line looks like a likely match; don't open every result. Don't reopen a page already read in this chat.
+
 ANCESTOR STORY (one per individual, alongside the log)
 - If my request says "with story" or "no story", follow that and don't ask.
 - Otherwise, once the research log is complete, ask: "Write the Ancestor Story for <Full Name> now? (Yes / No)" as a Yes/No choice, and wait for my answer before doing any story work.
 
 YES – write the story
 - Use the genealogy-research-log plugin's ancestor-story skill.
-- Source: the same data_<Full Name>.json; add a "story" section to it. No new genealogical research. Brief web lookups for general historical context (what an occupation involved, local industry and conditions) are allowed, each cited in a footnote.
+- Source: the same data_<Full Name>.json; add a "story" section to it. No new genealogical research. Brief web lookups for general historical context (what an occupation involved, local industry and conditions) are allowed, each cited in a footnote. Keep these to the key occupations and places, usually no more than 5 lookups.
 - Tone: warm and conversational, like a family historian telling relatives, not a formal report. Stay accurate; never invent dialogue, feelings or motives.
 - Order: origins and parents, birth and childhood, marriage(s), children, occupations and residences, migrations, military service, later life, death and burial. Add short, sourced historical context for key places and times where it helps.
 - Citations: numbered footnotes using the short citation (collection title). Full citations stay in the log.
@@ -69,3 +81,5 @@ NO – skip the story
 
 SKILLS
 - When I say "fixed", "run again", "rerun" or "check and update" for a person who already has a log, use the rerun-ancestor-log skill.
+- A rerun is a re-check, not new research. Re-read the person's FamilySearch profile and Sources tab, compare with data_<Full Name>.json, update only what changed and rebuild the files. Don't repeat the site searches or reopen sources already in the data file; open only newly attached sources. Do a full search again only if I say "rerun with full search", or if a tree change brings in a new place, spouse or record that needs checking.
+- If I name the actions I fixed (e.g. "fixed actions 1 and 3"), check those first.

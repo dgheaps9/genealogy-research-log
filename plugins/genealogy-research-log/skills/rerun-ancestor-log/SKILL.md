@@ -24,7 +24,7 @@ The user has made some of the log's suggested Tree Actions (or other fixes) in F
 
 For each Tree Action in the data file, decide: **Done** (the tree now matches), **Partly done** (say what is left), or **Not done**. Also note anything new that is now inconsistent (e.g. a merge brought in a conflicting date).
 
-Do not repeat the full record search. Only follow up a newly attached source or a new conflict. If something needs real new research, list it in "Still to search" and offer a full research run.
+Do not repeat the site searches, and do not reopen sources already in the data file. Open only newly attached sources and follow up only a new conflict. If the user names the actions they fixed (e.g. "fixed actions 1 and 3"), check those first. Search again only if the user says "rerun with full search" or a tree change brings in a new place, spouse or record; otherwise list what needs real new research in "Still to search" and offer a full research run.
 
 ## 3. Update the data file
 

@@ -39,7 +39,8 @@ Read `references/research-standards.md` before researching and `references/log-f
 
 Follow `references/research-standards.md` for coverage and `references/search-guide.md` for search URLs. In short:
 
-- FamilySearch historical records first, then the user's other sites (Ancestry, Findmypast, MyHeritage, Find a Grave, American Ancestors, Geneanet, Filae, Storied, Newspaper Archive, the GRO and any others the user has).
+- FamilySearch historical records first. Then, from the profile and sources, list every country the person lived in, and search only the user's sites that cover those countries (see the table in research-standards.md, or the user's own site list in their Project instructions). Add a country's sites if a move turns up. List each skipped site once in "Searches performed" as "not searched – outside the person's places of residence".
+- Read pages as text; open only likely-match records; don't reopen pages already read.
 - Try spelling variants; for women, search the maiden name with the father's name and birthplace.
 - Keep a running list of EVERY search — site, collection, search terms, result — including searches that found nothing and sites that could not be searched (with the reason). This becomes the "Searches performed" block.
 - Give every fact a confidence level (Proven / Probable / Possible) and record conflicting evidence.

@@ -83,3 +83,11 @@ They need Python 3 with python-docx and openpyxl. LibreOffice (free) makes the P
 
 Example request: "Research Mary Example, FamilySearch ID ABCD-123, born 1874 in Tuscarawas County, Ohio."
 Pick a deceased ancestor the user knows well so they can judge the results.
+
+Tips to keep usage down (tell the user once, briefly):
+- One ancestor per chat; start a new chat for each person or rerun.
+- Add "with story" or "no story" to the request so Claude doesn't have to ask.
+- After fixing the tree, say "fixed" (or "fixed actions 1 and 3") — a rerun re-checks FamilySearch only and doesn't repeat the site searches.
+- Claude searches only the sites for the countries the ancestor lived in, so there is no need to sign in to every site every time.
+- A lighter model (e.g. Sonnet) is usually enough for reruns and straightforward ancestors.
+- To see where a session's usage went, ask "explain my usage" at the end of that chat.
