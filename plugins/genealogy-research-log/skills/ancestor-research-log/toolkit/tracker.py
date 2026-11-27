@@ -31,9 +31,9 @@ for f in sorted(glob.glob(G+'/_data/data_*.json')):
     m=re.match(r'(.*?) ((?:abt )?\d{4})$',b); name,yr=m.group(1),m.group(2)
     still=''   # the "STILL TO SEARCH:" note itself, not a search row that says "(see Still to search)"
     nt=[fl(n) for n in d['notes']]
-    t=next((x for x in nt if x.lstrip().lower().startswith('still to search')),None) or next((x for x in nt if re.search(r'still to search\s*:',x,re.I)),'')
-    k=t.lower().find('still to search')
-    if k>=0: still=t[k+15:k+415].lstrip(' :.-–').strip()
+    t=next((x for x in nt if re.match(r'\s*still (to search|open)\b',x,re.I)),None) or next((x for x in nt if re.search(r'still to search\s*:',x,re.I)),'')   # older logs say "STILL OPEN:"
+    m=re.search(r'still (to search|open)',t,re.I)
+    if m: still=t[m.end():m.end()+400].lstrip(' :.-–').strip()
     done,mem,sty=keep.get((name,yr),(None,None,None))
     story='Y' if d.get('story') else (d.get('story_status') or sty)
     rows.append([name,pid,yr,'Yes' if inline else 'No',date,'Current' if d.get('layout','current')=='current' else 'Old – rebuild',len(d['actions']),done,None,mem,still,f'https://www.familysearch.org/tree/person/details/{pid}' if pid else '',story])
