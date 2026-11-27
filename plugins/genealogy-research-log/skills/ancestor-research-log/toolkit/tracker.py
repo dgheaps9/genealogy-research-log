@@ -29,10 +29,11 @@ for f in sorted(glob.glob(G+'/_data/data_*.json')):
     idr=[fl(r[1]) for r in d['ident'] if 'ID' in fl(r[0])]
     m2=re.search(r'[A-Z0-9]{4}-[A-Z0-9]{3,4}',idr[0]) if idr else None; pid=m2.group() if m2 else ''
     m=re.match(r'(.*?) ((?:abt )?\d{4})$',b); name,yr=m.group(1),m.group(2)
-    still=''
-    for n in d['notes']:
-        t=fl(n); k=t.lower().find('still to search')
-        if k>=0: still=t[k+15:k+415].lstrip(' :.-–').strip(); break
+    still=''   # the "STILL TO SEARCH:" note itself, not a search row that says "(see Still to search)"
+    nt=[fl(n) for n in d['notes']]
+    t=next((x for x in nt if x.lstrip().lower().startswith('still to search')),None) or next((x for x in nt if re.search(r'still to search\s*:',x,re.I)),'')
+    k=t.lower().find('still to search')
+    if k>=0: still=t[k+15:k+415].lstrip(' :.-–').strip()
     done,mem,sty=keep.get((name,yr),(None,None,None))
     story='Y' if d.get('story') else (d.get('story_status') or sty)
     rows.append([name,pid,yr,'Yes' if inline else 'No',date,'Current' if d.get('layout','current')=='current' else 'Old – rebuild',len(d['actions']),done,None,mem,still,f'https://www.familysearch.org/tree/person/details/{pid}' if pid else '',story])
