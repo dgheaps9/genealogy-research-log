@@ -70,6 +70,7 @@ This plugin is not affiliated with or endorsed by FamilySearch, Ancestry, Findmy
 
 Free to use, share and change under the MIT License (see LICENSE).
 
+0.4.1 — tracker: "Still to search" now comes from the log's STILL TO SEARCH note, not from a search row that mentions it (older logs' STILL OPEN note is read too).
 0.4.0 — lower usage: sites chosen by the countries the ancestor lived in; reruns re-check FamilySearch only ("rerun with full search" to search again); fewer page reads; story context lookups capped; usage tips in setup and README.
 0.3.1 — skill description fix for claude.ai.
 0.3.0 — Ancestor Story (new ancestor-story skill and `story.py`; Story (Y/N) column in the tracker); new rerun-ancestor-log skill; tracker shows "abt" birth years correctly.
